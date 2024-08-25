@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Dashboard</title>
+  <link rel="stylesheet" href="/styles/course.css">
+  <script src="/scripts/course.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title" id="<%= data.tcc_code %>">Course Details</div>
+      </div>
+      <div class="card-content">
+        <div class="grid">
+          <div class="grid-item font-medium">Course Code</div>
+          <div class="grid-item text-gray" id="courseCode"><%= teacher.course_code %></div>
+        </div>
+        <div class="grid">
+          <div class="grid-item font-medium">Course Name</div>
+          <div class="grid-item text-gray" id="courseName"><%= teacher.course_name %></div>
+        </div>
+        <div class="grid">
+          <div class="grid-item font-medium">Semester</div>
+          <div class="grid-item text-gray" id="courseSem"></div>
+        </div>
+        <div class="grid">
+          <div class="grid-item font-medium">Class</div>
+          <div class="grid-item text-gray" id="className"></div>
+        </div>
+        <div class="grid">
+          <div class="grid-item font-medium">Total Classes</div>
+          <div class="grid-item text-gray" id="totalPeriod"></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="button primary-button" id="toggleAttendance">Mark Attendance</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Students</div>
+      </div>
+      <div class="card-content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Class Attended</th>
+              <th>Attendance Percentage</th>
+            </tr>
+          </thead>
+          <tbody id="studentInfo">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card" id="attendanceTable" style="display: none;">
+      <div class="card-header">
+        <div class="card-title">Attendance</div>
+      </div>
+      <div class="card-content">
+        <div class="details"></div>
+          <label for="currDate">Date</label>
+          <input type="date" id="currDate" >
+          <label for="period">Period</label>
+          <select id="period">
+            <option value="null"></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="X">Extra</option>
+          </select>
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Attendance</th>
+              </tr>
+            </thead>
+            <tbody id="attendanceRows">
+            </tbody>
+        </table>
+       <button id="submitAttendance">Submit</button>
+       <button id="generateQR">Generate QR</button>
+       <p id="displayMsg"></p>
+      </div>
+    </div>
+    <div class="card" id="qrCard" style="display:none">
+      <div class="card-header">
+        <div class="card-title">QR CODE</div>
+      </div>
+      <div class="card-content">
+        <div class="qrCode" id="qrCode">
+        </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <script src="/scripts/markAttendance.js"></script>
+</body>
+</html>
+

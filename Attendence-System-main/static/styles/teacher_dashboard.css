@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Uchen:regular);@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+/* Card */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu";
+}
+body{
+ background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  /* Card Header */
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content:flex-start;
+    padding: 20px;
+  }
+  
+  /* Card Title */
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  /* Card Description */
+  .card-description {
+    display: block;
+  }
+  
+  /* "Add new course" Button */
+  .buttons button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color:black;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .Logout{
+    position: absolute;
+    top:15px;
+    right:180px
+  }
+  .Logout a{
+    text-decoration: none;
+    color:black;
+    font-size: 16px;
+  }
+  .newCourse{
+    position: absolute;
+    top:15px;
+    right:20px
+  }
+  
+  /* Card Content */
+  .card-content {
+    padding: 20px;
+    
+   }
+  
+  /* Course Card */
+  .course-card {
+    background-color:white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding:10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  /* Course Card Content */
+  .course-card-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  /* Course Title */
+  .course-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Course Description */
+  .course-description {
+    color: #666;
+  }
+  
+  /* "View" Link */
+  .view-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    position:absolute;
+    right:100px;
+    /* display: inline; */
+  }
+  .view-link p{
+    display: inline;
+    position: relative;
+    top:-7px;
+  }
+  
+  #newCourseFormContainer{
+    background-color:transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding:10px;
+    overflow: hidden;
+    display: flex;
+    position:relative;
+    top:20%;
+    left:20%;
+    margin-bottom: 20px;
+    height:600px;
+    width:700px;
+  }
+
+  #newCourseForm{
+    padding:30px;
+    height:70%;
+    width:40%;
+    position:relative;
+    top:5%;
+    left:25%;
+    display: flex;
+    flex-direction: column;
+  }
+
+ #newCourseForm label{
+  margin:5px;
+  font-size: large;
+ }
+
+#newCourseForm select{
+    margin-bottom: 15%;
+    width:75%;
+    padding:5px;
+    background-color:whitesmoke;
+    border-radius: 8px;
+    font-size: medium;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+#newCourseForm button{
+  padding:8px;
+  width:30%;
+  font-size: medium;
+  border-radius: 8px;
+  background-color: rgb(243, 238, 238);
+  margin-bottom:3%;
+}
+#displayMsg{
+  position:relative;
+  border-radius: 4px;
+  bottom:-13%;
+  left:20%;
+  width:50%;
+  text-align: center;
+  padding:5px;
+}

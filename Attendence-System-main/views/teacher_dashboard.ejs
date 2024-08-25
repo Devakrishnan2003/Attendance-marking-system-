@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/teacher_dashboard.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Teacher Dashboard</title>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title" id="<%= teacher.teacher_id %>">Hi,<%= teacher.name %> !</div>
+      <div class="card-description">Here are the courses you're currently teaching</div>
+    </div>
+    <div class="buttons">
+      <button class="Logout"><a href="/teacher_login.html">Logout</a></button>
+      <button class="newCourse">Add Course</button>
+    </div>
+    <div class="card-content">
+    </div>
+    <div id="newCourseFormContainer" style="display: none;">
+      <form id="newCourseForm">
+         <label for="courseCode">Course Code</label>
+         <select id="courseCode">
+          <option value="null"></option>
+          <option value="CST201">CST201</option>
+          <option value="CST301">CST301</option>
+          <option value="CST302">CST302</option>
+          <option value="ECE203">ECE203</option> 
+          <option value="ECE301">ECE301</option> 
+         </select>
+         <label for="courseName">Course Name</label>
+         <select id="courseName">
+         </select>
+         <label for="semester">Semester</label>
+         <select id="semester">
+          <option value="null"></option>
+          <option value="2">S2</option>
+          <option value="4">S4</option>
+          <option value="6">S6</option>
+          <option value="8">S8</option>
+         </select>
+         <label for="className">Class Name</label>
+         <select id="className">
+          <option value="null"></option>
+          <option value="1">CSE</option>
+          <option value="2">ECE</option>
+         </select>
+         <button type="submit">Submit</button>
+        </form>
+        <p id="displayMsg"></p>
+     </div>
+  </div>
+  <script src="/scripts/teacher_dashboard.js"></script>
+  <script src="/scripts/add_course.js"></script>
+</body>
+</html>

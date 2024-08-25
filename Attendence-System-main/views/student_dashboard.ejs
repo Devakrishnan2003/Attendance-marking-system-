@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/student_dashboard.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Student Dashboard</title>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title" id="<%= student.student_id %>">Hi,<%= student.name %> !</div>
+      <div class="card-description">Here are the courses you're currently learning</div>
+    </div>
+    <div class="buttons">
+      <button class="Logout"><a href="/student_login.html">Logout</a></button>
+    </div>
+    <div class="card-content">
+      <div class="grid">
+        <div class="grid-item font-medium">Semester</div>
+        <div class="grid-item text-gray" id="courseSem"><%= student.semester %></div>
+      </div>
+      <div class="grid">
+        <div class="grid-item font-medium">Class</div>
+        <div class="grid-item text-gray" id="className"><%= student.class %></div>
+      </div>
+    </div>
+    <div class="card-content" id="card-content">
+
+    </div>
+  <script src="/scripts/student_dashboard.js"></script>
+</body> 
+</html>

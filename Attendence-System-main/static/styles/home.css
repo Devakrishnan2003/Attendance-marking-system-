@@ -1,0 +1,126 @@
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu";
+    box-sizing: border-box; 
+}
+
+/* Navbar */
+.navbar {
+    background-color:transparent;
+    height: 10vh;
+    width: 100%;
+    color: black;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+    z-index: 1000; 
+}
+
+.nav-logo {
+    display: inline;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items a {
+    text-decoration:none;
+    color: black;
+    margin-right:20px; 
+    font-weight: 300; 
+    padding:5px
+}
+.nav-items a:hover{
+   font-weight: 600;
+}
+#home {
+   font-weight:600; 
+   border-bottom: 4px solid black;
+}
+body{
+   background-color: #c9d6ff;
+   background:linear-gradient(to right,#e2e2e2,#c9d6ff);
+ }
+
+/* Main Content */
+.wrapper {
+    width: 100%;
+    min-height: 100vh; 
+    padding-top: 10vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote {
+    text-align: center; 
+    font-size: 24px; 
+    margin-bottom: 20px; 
+    transform: translateX(3%);
+    
+}
+
+.login {
+    width: 90%; 
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 400px; 
+    padding: 20px;
+    background-color: #f9f9f9; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px;
+    text-align: center; 
+    transform: translateX(7%);
+}
+
+.student_login,.teacher_login {
+    height:150px;
+    margin-bottom: 20px; 
+    background-color:#f9f9f9; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.login i{
+   color:black;
+   margin-right: 5px;
+}
+.login a{
+   text-decoration: none;
+}
+.teacher_login {
+    background: #f5f5f5; /* Change background color */
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    background-color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure footer is on top */
+
+}
+@media only screen and (max-width: 450px){
+   .nav-logo {
+      margin:auto;
+      display: block;
+  } 
+}

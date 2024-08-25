@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Dashboard</title>
+  <link rel="stylesheet" href="/styles/course_student.css">
+  <script src="/scripts/course_student.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.3.1/dist/jsQR.min.js"></script>
+</head>
+<body>
+  <div class="container" id="<%= data.id %>">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title" id="<%= data.tcc_code %>">Course Details</div>
+      </div>
+      <div class="card-content">
+        <div class="grid">
+          <div class="grid-item font-medium">Course Code</div>
+          <div class="grid-item text-gray" id="courseCode"><%= student.course_code %></div>
+        </div>
+        <div class="grid">
+          <div class="grid-item font-medium">Course Name</div>
+          <div class="grid-item text-gray" id="courseName"><%= student.course_name %></div>
+        </div>
+        <div class="grid">
+          <div class="grid-item font-medium">Teacher</div>
+          <div class="grid-item text-gray" id="teacherName"></div>
+        </div>
+        <div class="grid">
+          <div class="grid-item font-medium">Total Classes</div>
+          <div class="grid-item text-gray" id="totalPeriod"></div>
+        </div>
+      </div>
+      <div class="card-footer" id="card-footer">
+        <video id="preview" style="display:none"></video>
+        <button class="button primary-button" id="scanQR">Scan QR</button>
+        <p id="displayMsg" style="display: none"></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Attendance Details</div>
+      </div>
+      <div class="card-content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Class Attended</th>
+              <th>Attendance Percentage</th>
+            </tr>
+          </thead>
+          <tbody id="attendanceInfo">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Absence Details</div>
+      </div>
+      <div class="card-content">
+        <table class="table">
+          <thead id="absenceHead">
+            <tr>
+              <th>Date</th>
+              <th>Period</th>
+            </tr>
+          </thead>
+          <tbody id="absenceInfo">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+  </div>
+  <script src="/scripts/markAttendance_student.js"></script>
+</body>
+</html>
+
