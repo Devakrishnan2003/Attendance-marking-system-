@@ -1,1 +1,1 @@
-# Attendance-marking-system-
+The *Automated Attendance System Using QR Code* is a smart solution designed to streamline attendance tracking in educational institutions, workplaces, and events. By generating unique QR codes for classes, the system allows for quick and accurate attendance marking through scanning. It eliminates manual errors, enhances security, and provides real-time attendance records, making the process more efficient and reliable.
